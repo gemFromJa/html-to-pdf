@@ -1,0 +1,22 @@
+.form-container {
+	background-color: #fff;
+	padding: 1rem 1.5rem;
+
+	& > .button-group {
+		display: flex;
+		flex-wrap: wrap;
+
+		& > * {
+			margin-bottom: 1.5rem;
+		}
+
+		> *:first-child {
+			margin-right: 2rem;
+		}
+
+		.submit-btn {
+			background-color: #43a7f0;
+			color: #fff;
+		}
+	}
+}

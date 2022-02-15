@@ -1,0 +1,14 @@
+{
+	"name": "template-html-to-img",
+	"version": "1.0.0",
+	"description": "html to img/pdf unit. Allows generating templates for an html file created. API useful for resume's for example",
+	"scripts": {
+		"start-backend": "cd template-image-maker && npm start",
+		"start-ui": "cd template-image-maker-frontend && npm start",
+		"start": "npm-run-all -p start-backend start-ui"
+	},
+	"author": "gemfromja",
+	"dependencies": {
+		"npm-run-all": "^4.1.5"
+	}
+}

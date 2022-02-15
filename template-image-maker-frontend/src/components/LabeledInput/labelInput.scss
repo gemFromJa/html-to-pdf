@@ -1,0 +1,30 @@
+.label-input-container {
+	display: flex;
+	flex-direction: column;
+	margin: 16px 0;
+
+	> label {
+		margin-bottom: 12px;
+		color: #5c5c5c;
+	}
+
+	> input.data-source {
+		height: 40px;
+	}
+
+	> textarea.data-source {
+		height: 300px;
+		resize: none;
+	}
+
+	> .data-source {
+		box-sizing: border-box;
+		border-radius: 8px;
+		border: 1px solid #f0f0f0;
+		box-shadow: 0px 0px 8px -4px #717171;
+		padding: 10px 16px;
+		font-size: 14px;
+		font-weight: 400;
+		font-family: inherit;
+	}
+}

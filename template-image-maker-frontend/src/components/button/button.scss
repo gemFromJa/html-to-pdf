@@ -1,0 +1,16 @@
+.custom-btn {
+	height: 30px;
+	min-width: 150px;
+	text-transform: capitalize;
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid #e9e9ed;
+	border-radius: 8px;
+
+	&:disabled {
+		cursor: not-allowed;
+		color: #b8b8b8 !important;
+		border: 1px solid #e9e9ed !important;
+		background-color: #e9e9ed !important;
+	}
+}

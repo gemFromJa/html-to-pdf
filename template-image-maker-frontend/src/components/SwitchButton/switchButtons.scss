@@ -1,0 +1,33 @@
+.switch-buttons {
+	display: flex;
+	flex-direction: row;
+
+	$size: 8px;
+
+	button {
+		border-radius: 0;
+		border: none;
+		height: 30px;
+		min-width: 100px;
+		font-size: 14px;
+		background-color: #f0f0f0;
+		color: #5c5c5c;
+		cursor: pointer;
+	}
+
+	button:first-of-type {
+		border-top-left-radius: $size;
+		border-bottom-left-radius: $size;
+		border-right: 2px solid #cccccc;
+	}
+
+	button:last-of-type {
+		border-top-right-radius: $size;
+		border-bottom-right-radius: $size;
+	}
+
+	button.active {
+		background-color: #54ce68;
+		color: #fff;
+	}
+}

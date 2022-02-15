@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<title>Receipt Template</title>
+		<!-- 
+			Don't use any '#' characters otherwise it breaks handlebars + puppeteer
+			Use RGBA values instead, and classes instead of IDs
+		-->
+		<style type="text/css">
+			@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700");
+
+			body {
+				margin: 0;
+				height: 100vh;
+				font-family: Roboto;
+			}
+
+			p,
+			h1,
+			h2 {
+				margin: 0;
+			}
+
+			.top-logo {
+				display: block;
+				margin: auto;
+				height: 300px;
+				width: 100%;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: row;
+				height: 100%;
+			}
+
+			.header {
+				color: rgb(0, 40, 104);
+				font-weight: bold;
+				text-align: center;
+				font-size: 1.5em;
+			}
+
+			.row {
+				align-content: space-between;
+				color: rgb(0, 40, 104);
+				font-size: 1.1em;
+				flex-direction: row;
+				display: flex;
+				justify-content: space-between;
+				width: auto;
+				margin: 25px 0;
+			}
+
+			.col-header {
+				align-self: flex-start;
+				flex: 1;
+				font-weight: bold;
+			}
+
+			.col-text {
+				align-self: flex-start;
+				flex: 1;
+			}
+
+			.card {
+				background-color: rgb(255, 198, 0);
+				border-radius: 10px;
+				display: table;
+				height: 380px;
+				justify-content: center;
+				padding: 30px 20px;
+				margin: auto;
+				margin-top: 16px;
+				width: 90%;
+			}
+
+			.content {
+				margin-top: 30px;
+			}
+
+			.footer {
+				margin-top: 20px;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				padding-bottom: 16px;
+				border-bottom: 2pt solid rgb(0, 0, 0);
+				font-weight: bold;
+			}
+
+			.text {
+				color: rgb(0, 40, 104);
+				flex: 1;
+				margin: auto;
+				margin-left: 30px;
+			}
+
+			.left-panel {
+				background-color: rgb(0, 40, 104);
+				flex: 0 0 30%;
+			}
+
+			.right-panel {
+				background-color: rgb(255, 255, 255);
+				flex: 1;
+				padding: 20px 50px;
+			}
+
+			.footer-image {
+				display: block;
+				flex: 0 0 auto;
+				width: 150px;
+			}
+
+			.footer-text-1 {
+				color: rgb(9, 52, 122);
+				flex: 1;
+			}
+
+			.footer-text-2 {
+				color: rgb(9, 52, 122);
+				flex: 1;
+				margin-top: 10px;
+			}
+		</style>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="left-panel"></div>
+			<div class="right-panel">
+				<div class="content">
+					<p class="header">
+						Receipt Number:
+						<br />{{name}}
+					</p>
+					<div class="card">
+						<div class="row">
+							<p class="col-header">
+								Policy Number:
+							</p>
+							<p class="col-text">
+								{{number}}
+							</p>
+						</div>
+
+						<div class="row">
+							<p class="col-header">
+								Payment Type:
+							</p>
+							<p class="col-text">
+								{{note}}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
