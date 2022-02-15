@@ -14,3 +14,7 @@ then
 ```
 npm start
 ```
+
+### Screenshot
+
+<img src="./screenshot.png" alt="Applet" width="320"/>
